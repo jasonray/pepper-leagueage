@@ -1,4 +1,4 @@
-package com.example.springboot;
+package net.jayray.pepper.leagueage;
 
 import static org.assertj.core.api.Assertions.*;
 

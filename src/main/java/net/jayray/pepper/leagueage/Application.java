@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class Application {
 
-	private Logger logger = LoggerFactory.getLogger(Application.class);
+	private final Logger logger = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);

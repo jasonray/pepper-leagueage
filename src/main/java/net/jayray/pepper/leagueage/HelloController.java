@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HelloController {
 
-    private Logger logger = LoggerFactory.getLogger(HelloController.class);
+    private final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
     @RequestMapping("/")
     public String index() {

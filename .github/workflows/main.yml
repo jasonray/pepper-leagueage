@@ -35,13 +35,7 @@ jobs:
           java-version: 1.8
 
       - name: Compile
-        run: mvn --batch-mode --update-snapshots clean install
-
-      - name: Unit Test
-        run: mvn verify surefire-report:report-only site -DgenerateReports=false
-
-      - name: Package Unit Test Report
-        run: mvn surefire-report:report-only site -DgenerateReports=false surefire-report:report-only
+        run: mvn --batch-mode --update-snapshots verify surefire-report:report-only site -DgenerateReports=false
 
       - run: mkdir staging && cp target/*.jar
       - uses: actions/upload-artifact@v2

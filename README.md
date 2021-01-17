@@ -7,6 +7,9 @@
 - Run `./run.sh`
 
 # Use it!
+
+With application running, view [swagger documentation](http://localhost:9080/swagger-ui.html#/hello-controller)
+
 ## Hello World
 Sample method.
 

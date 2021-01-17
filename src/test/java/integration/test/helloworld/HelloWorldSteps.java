@@ -17,7 +17,7 @@ public class HelloWorldSteps {
     private ResponseEntity<String> response;
 
     public HelloWorldSteps() {
-        this.requestUriBuilder = UriComponentsBuilder.newInstance().scheme("http").host(URI_HOST).port(URI_PORT);
+        this.requestUriBuilder = UriComponentsBuilder.newInstance().scheme("http").host(URI_HOST).port(URI_PORT).path("hello-world");
     }
 
     @Given("the pepper app is running")

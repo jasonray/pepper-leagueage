@@ -13,7 +13,7 @@ public class HelloController {
 
     private final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
-    @RequestMapping("/")
+    @RequestMapping("/hello-world")
     public String index(@RequestParam Optional<String> name) {
         logger.debug("Hello Controller invoked");
 

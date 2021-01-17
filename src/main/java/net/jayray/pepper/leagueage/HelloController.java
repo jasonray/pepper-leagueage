@@ -18,13 +18,23 @@ public class HelloController {
         logger.debug("Hello Controller invoked");
 
         String greeting;
-        if (name.isPresent()) {
+        if (isValid(name)) {
             greeting = "hello " + name.get() + "!";
         } else {
             greeting = "hello world!";
         }
 
         return greeting;
+    }
+
+    private boolean isValid(Optional<String> value) {
+        boolean valid;
+        if (value.isPresent()) {
+            valid = (value.get().trim().length() > 0);
+        } else {
+            valid = false;
+        }
+        return valid;
     }
 
 }

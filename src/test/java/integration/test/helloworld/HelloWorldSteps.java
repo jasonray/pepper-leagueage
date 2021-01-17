@@ -26,9 +26,15 @@ public class HelloWorldSteps {
     }
 
     @When("I invoke the hello world API")
-    public void invokeHelloWorldApp() throws Throwable {
+    public void invokeHelloWorldApp() {
         RestTemplate restTemplate = new RestTemplate();
         this.response = restTemplate.getForEntity(this.requestUriBuilder.build().toUriString(), String.class);
+    }
+
+    @When("I invoke the hello world API with name of {string}")
+    public void invokeHelloWorldApp(String name) {
+        RestTemplate restTemplate = new RestTemplate();
+        this.response = restTemplate.getForEntity(this.requestUriBuilder.queryParam("name", name).build().toUriString(), String.class);
     }
 
     @Then("I get a successful HTTP status response")
@@ -41,6 +47,5 @@ public class HelloWorldSteps {
     public void verifyResponse(String expectedResponse) throws Throwable {
         assertEquals(expectedResponse, response.getBody().toString());
     }
-
 
 }

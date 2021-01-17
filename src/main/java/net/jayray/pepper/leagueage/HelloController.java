@@ -13,7 +13,7 @@ public class HelloController {
     @RequestMapping("/")
     public String index() {
         logger.debug("Hello Controller invoked");
-        return "Greetings from Spring Boot!";
+        return "hello world!";
     }
 
 }

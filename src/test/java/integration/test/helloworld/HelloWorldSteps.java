@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
+
 import static org.junit.Assert.assertEquals;
 
 public class HelloWorldSteps {
@@ -35,5 +36,11 @@ public class HelloWorldSteps {
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(200, response.getStatusCodeValue());
     }
+
+    @Then("I receive a response of {string}")
+    public void verifyResponse(String expectedResponse) throws Throwable {
+        assertEquals(expectedResponse, response.getBody().toString());
+    }
+
 
 }

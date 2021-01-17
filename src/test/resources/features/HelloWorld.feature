@@ -5,3 +5,4 @@ Feature: Hello World
     Given the pepper app is running
     When I invoke the hello world API
     Then I get a successful HTTP status response
+    And I receive a response of "hello world!"

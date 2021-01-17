@@ -43,7 +43,8 @@ jobs:
           name: Package
           path: staging      
 
-      - run: mkdir staging-report && cp -r target/site staging-report &&  mv staging-report/surefire-report.html unittest-results.html
+      - run: mkdir staging-report && cp -r target/site staging-report
+      - run: mkdir staging-report && cp -r target/site staging-report &&  mv staging-report/site/surefire-report.html mv staging-report/site/unittest-results.html
       - uses: actions/upload-artifact@v2
         with:
           name: UnitTestResults

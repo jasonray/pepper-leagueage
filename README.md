@@ -13,7 +13,7 @@ With application running, view [swagger documentation](http://localhost:9080/swa
 ### Hello World
 Sample method.
 
-```
+``` bash
 curl localhost:9080/hello-world?name=pepper
 hello pepper! 
 ```

@@ -12,4 +12,4 @@ then
 fi
 
 printf "\n\n\n\n${RED}Running API${NC}\n\n\n\n"
-./mvnw spring-boot:run
+mvn spring-boot:run

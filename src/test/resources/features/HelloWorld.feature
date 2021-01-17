@@ -16,3 +16,4 @@ Feature: Hello World
     Examples:
       | name        | expectedResponse   |
       | grasshopper | hello grasshopper! |
+      |             | hello world!       |

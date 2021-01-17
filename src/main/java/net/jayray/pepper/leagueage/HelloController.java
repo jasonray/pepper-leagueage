@@ -15,7 +15,7 @@ public class HelloController {
     private final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
     @GetMapping("/hello-world")
-    public String index(@RequestParam Optional<String> name) {
+    public String sayHello(@RequestParam Optional<String> name) {
         logger.debug("Hello Controller invoked");
 
         String greeting;

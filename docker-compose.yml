@@ -3,4 +3,4 @@ services:
   pepper-leagueage-api-service:
     build: .
     ports:
-      - "8081:8080"
+      - "9080:8080"

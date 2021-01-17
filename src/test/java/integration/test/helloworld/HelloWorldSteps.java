@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class HelloWorldSteps {
     public UriComponentsBuilder requestUriBuilder;
     private final String URI_HOST = "localhost";
-    private final String URI_PORT = "8080";
+    private final String URI_PORT = "9080";
     private ResponseEntity<String> response;
 
     public HelloWorldSteps() {

@@ -28,13 +28,11 @@ public class HelloController {
     }
 
     private boolean isValid(Optional<String> value) {
-        boolean valid;
         if (value.isPresent()) {
-            valid = (value.get().trim().length() > 0);
+            return (value.get().trim().length() > 0);
         } else {
-            valid = false;
+            return false;
         }
-        return valid;
     }
 
 }

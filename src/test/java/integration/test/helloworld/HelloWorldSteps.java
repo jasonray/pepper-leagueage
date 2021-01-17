@@ -12,8 +12,8 @@ import static org.junit.Assert.assertEquals;
 
 public class HelloWorldSteps {
     public UriComponentsBuilder requestUriBuilder;
-    private String URI_HOST = "localhost";
-    private String URI_PORT = "8080";
+    private final String URI_HOST = "localhost";
+    private final String URI_PORT = "8080";
     private ResponseEntity<String> response;
 
     public HelloWorldSteps() {
@@ -38,14 +38,14 @@ public class HelloWorldSteps {
     }
 
     @Then("I get a successful HTTP status response")
-    public void verifySuccessfulHttpStatus() throws Throwable {
+    public void verifySuccessfulHttpStatus() {
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(200, response.getStatusCodeValue());
     }
 
     @Then("I receive a response of {string}")
-    public void verifyResponse(String expectedResponse) throws Throwable {
-        assertEquals(expectedResponse, response.getBody().toString());
+    public void verifyResponse(String expectedResponse) {
+        assertEquals(expectedResponse, response.getBody());
     }
 
 }

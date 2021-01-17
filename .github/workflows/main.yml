@@ -34,11 +34,23 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Compile / unit test
-        run: mvn --batch-mode --update-snapshots verify surefire-report:report-only site -DgenerateReports=false
+      - name: Compile
+        run: mvn --batch-mode --update-snapshots 
 
-      - run: mkdir staging && cp target/*.jar staging
+      - name: Unit Test
+        run: mvn verify surefire-report:report-only site -DgenerateReports=false
+
+      - name: Package Unit Test Report
+        run: mvn surefire-report:report-only site -DgenerateReports=false surefire-report:report-only
+
+      - run: mkdir staging && cp target/*.jar
       - uses: actions/upload-artifact@v2
         with:
           name: Package
           path: staging      
+
+      - run: mkdir staging-report && cp target/site staging-report
+      - uses: actions/upload-artifact@v2
+        with:
+          name: UnitTestResults
+          path: staging-report      

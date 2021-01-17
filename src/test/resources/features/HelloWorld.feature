@@ -14,5 +14,5 @@ Feature: Hello World
     And I receive a response of "<expectedResponse>"
 
     Examples:
-    | name | expectedResponse |
-    | grasshopper | hello grasshopper! |
+      | name        | expectedResponse   |
+      | grasshopper | hello grasshopper! |

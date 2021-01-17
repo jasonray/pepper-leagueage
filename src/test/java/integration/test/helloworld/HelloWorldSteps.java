@@ -22,7 +22,7 @@ public class HelloWorldSteps {
     }
 
     @Given("the pepper app is running")
-    public void checkAppRunning(String criteria, String value) {
+    public void checkAppRunning() {
         //TODO: check the metrics endpoint to ensure it is running
     }
 

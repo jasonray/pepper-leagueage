@@ -8,9 +8,9 @@ import static org.junit.Assert.assertEquals;
 
 public class CommonSteps {
 
-    private final ApiContext context;
+    private final IntegrationTestContext context;
 
-    public CommonSteps(ApiContext context) {
+    public CommonSteps(IntegrationTestContext context) {
         this.context = context;
     }
 

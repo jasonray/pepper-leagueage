@@ -1,15 +1,15 @@
 package integration.test.helloworld;
 
-import integration.test.ApiContext;
+import integration.test.IntegrationTestContext;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static org.junit.Assert.assertEquals;
 
 public class HelloWorldSteps {
-    private final ApiContext<String> context;
+    private final IntegrationTestContext<String> context;
 
-    public HelloWorldSteps(ApiContext<String> context) {
+    public HelloWorldSteps(IntegrationTestContext<String> context) {
         this.context = context;
         this.context.requestUriBuilder = this.context.requestUriBuilder.path("hello-world");
     }

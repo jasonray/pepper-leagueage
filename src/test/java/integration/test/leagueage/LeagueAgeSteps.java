@@ -1,6 +1,6 @@
 package integration.test.leagueage;
 
-import integration.test.ApiContext;
+import integration.test.IntegrationTestContext;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.slf4j.Logger;
@@ -9,11 +9,11 @@ import org.slf4j.LoggerFactory;
 import static org.junit.Assert.assertEquals;
 
 public class LeagueAgeSteps {
-    private final ApiContext<Integer> context;
+    private final IntegrationTestContext<Integer> context;
 
     private final Logger logger = LoggerFactory.getLogger(LeagueAgeSteps.class);
 
-    public LeagueAgeSteps(ApiContext<Integer> context) {
+    public LeagueAgeSteps(IntegrationTestContext<Integer> context) {
         logger.trace("init LeagueAgeSteps; context: [{}]; context.requestUriBuilder: [{}]", context, context.requestUriBuilder);
         this.context = context;
         this.context.requestUriBuilder = this.context.requestUriBuilder.path("league-age");

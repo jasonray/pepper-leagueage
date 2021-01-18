@@ -16,6 +16,10 @@ public class LeagueAgeCalculator {
         //calculate league age reference as 8/31 of reference year
         //determine years for league age reference
 
+        if (referenceDate == null) {
+            return calculateLeagueAge(dob);
+        }
+
         LocalDate birthDateLocalDate = dob.toInstant()
                 .atZone(ZoneId.systemDefault())
                 .toLocalDate();
